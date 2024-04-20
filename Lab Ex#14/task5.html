@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #5: Padding and Margin Modification</title>
+</head>
+<body>
+
+<div id="myDiv" style="width: 300px; height: 200px; background-color: rgb(124, 203, 252); padding: 20px; margin: 50px auto; text-align: center; font-family: Arial, sans-serif;">
+  <p>This is my Div Element</p>
+  <button onclick="increasePadding()">Increase Padding</button>
+  <button onclick="increaseMargin()">Increase Margin</button>
+</div>
+
+<script>
+  function increasePadding() {
+    var divElement = document.getElementById('myDiv');
+    var currentPadding = parseInt(window.getComputedStyle(divElement).padding.replace("px", ""));
+    divElement.style.padding = (currentPadding + 10) + "px";
+  }
+
+  function increaseMargin() {
+    var divElement = document.getElementById('myDiv');
+    var currentMargin = parseInt(window.getComputedStyle(divElement).margin.replace("px", ""));
+    divElement.style.margin = (currentMargin + 10) + "px auto";
+  }
+</script>
+
+</body>
+</html>
